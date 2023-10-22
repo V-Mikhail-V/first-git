@@ -1,0 +1,1385 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+.open {
+  display: flex !important;
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Roboto"),
+    /* Если не получилось, загрузит woff2 */
+    url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+    url("../fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  font-style: normal;
+  font-weight: 700;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Roboto"),
+    /* Если не получилось, загрузит woff2 */
+    url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+    /* Если браузер не поддерживает woff2, загрузит woff */
+    url("../fonts/Gilroy-Bold.woff") format("woff");}
+@font-face {
+    font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Roboto"),
+    url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "Gilroy-Semibold";
+    font-style: normal;
+    font-weight: 600;
+    src: local("Roboto"),
+    url("../fonts/Gilroy-Semibold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Semibold.woff") format("woff");
+    /* font-family: "Gilroy-Medium";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Roboto"),
+    url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy-Medium.woff") format("woff"); */
+}
+
+
+body {
+  min-height: 100vh;
+  font-family: 'Gilroy-Regular',
+  sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.205em;
+  color: #000;
+  background-color: #fff;
+
+
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container2{
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+
+.logo{
+  margin-top: 20px;
+}
+
+.header__nav{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  height: 133px;
+  margin: 0 auto;
+}
+
+.menu,
+.menu__footer {
+  display: flex;
+}
+
+.menu li{
+  position: relative;
+}
+
+.menu__list{
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.menu__list-item{
+  display: flex;
+}
+
+.menu__list-item+.menu__list-item {
+  margin-left: 60px;
+}
+
+.menu__list-item-about:hover .sub-menu__list {
+  display: block;
+}
+
+.menu__list-item-services:hover .sub-menu__list {
+  display: block;
+}
+
+.menu__list-item-book__appointment:hover .sub-menu__list {
+  display: block;
+}
+
+.menu__list-item-testimonials:hover .sub-menu__list {
+  display: block;
+}
+
+.menu__list-link,
+.blog__menu-list {
+  color: #000;
+}
+
+.sub-menu__list{
+  display: none;
+  position: absolute;
+  max-height: 100px;
+  max-width: 250px;
+  left: 0;
+  top: 10px;
+  padding-top: 15px;
+  
+}
+
+.open{
+  display: block;
+}
+
+.sub-menu__list>li{
+  width: 100%;
+  border: 1px #000 solid;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  z-index: 12;
+  background-color: #C2DAD4;
+}
+
+.cub-menu__list-item{
+  padding: 5px 5px ;
+}
+
+.blog__menu{
+  display: flex;
+  margin-left: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.blog__menu-list + .blog__menu-list{
+  margin-left: 38px;
+}
+
+.contact__btn{
+  
+  padding: 9px 28px 8px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color: #fff;
+  /* margin: 49px 0 50px 47px; */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 47px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+
+.arrow{
+  width: 0;
+  height: 0;
+  margin-left: 12px;
+  margin-top: 5px;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+}
+
+.box__menu{
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+}
+
+.burger {
+  display: none;
+  position: relative;
+  z-index: 50;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  align-items: center;
+  margin: auto 0;
+}
+
+.burger .burger__line {
+  height: 2px;
+  width: 100%;
+  transform: scale(1);
+  background-color: #000;
+
+}
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active .burger__line {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+
+.empower-container2{
+  
+  background-image: url('../images/Rectangle27.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 133px)
+}
+
+
+.empower__title{
+  font-family: 'Gilroy-Bold';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.045em;
+  color: #fff;
+  
+}
+
+.empower__session-link{
+  display: flex;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  padding: 18px 54px;
+  background-color: #fff;
+  margin-top: 50px;
+  color: #000;
+}
+
+.empower__session-arrow{
+  margin-left: 14px;
+}
+
+.empower__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 133px);
+}
+
+
+.about__content{
+  display: flex;
+  margin: 86px 0;
+}
+
+
+
+.about__content-text{
+  max-width: 580px;
+  margin-left: 24px;
+  margin-top: 5px;
+}
+
+.about__title{
+  font-family: 'Gilroy-Medium';
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 46px;
+  letter-spacing: 0.045em;
+  margin-bottom: 40px;
+}
+
+.about__content-title{
+  font-family: 'Gilroy-Semibold';
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: 0.045em;
+  margin-bottom: 40px;
+}
+
+
+.about__text{
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.045em;
+  margin-bottom: 27px;
+}
+
+.about__content-list{
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.045em;
+  margin-bottom: 45px;
+
+}
+
+.about__content-list>li::before {
+  content: "";
+  background: #000;
+  border-radius: 8px;
+  padding-inline: 8px;
+  margin-inline-end: 7px;
+}
+
+.about__find-link{
+  display: flex;
+  padding: 28px 97px;
+  color: #fff;
+  font-family: 'Gilroy-Bold';
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  background: #91D597;
+  border-radius: 10px;
+  width: 419px;
+  
+}
+
+.about__find-arrow{
+  margin-left: 14px;
+  margin-bottom: 6px;
+}
+
+
+
+.contact__content{
+  display: flex;
+  justify-content: center;
+  background-color: #DFE8E6;
+ 
+  
+}
+
+.contact__title{
+  font-family: 'Gilroy-Medium';
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  margin-bottom: 24px;
+}
+
+.contact__text{
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  margin-bottom: 53px;
+}
+
+.contact__form{
+  
+  max-width: 600px;
+  margin-top: 78px;
+  margin-bottom: 110px;
+}
+
+.input-name {
+  width: 600px;
+  height: 73px;
+  background-color: #C2DAD4;
+  border-radius: 9px;
+  border: none;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.045em;
+  color: #898989;
+  padding-left: 30px;
+
+}
+
+.input-contact:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.input-name::placeholder {
+ font-size: 24px;
+ line-height: 29px;
+ letter-spacing: 0.045em;
+ color: #898989;
+ padding-left: 30px;
+
+}
+
+.input-btn{
+  display: block;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.045em;
+  color: #FFFFFF;
+  padding: 22px 32px;
+  background-color: #68BCA7;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  margin-top: 43px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.contact__img{
+  margin-top: 184px;
+  margin-bottom: 80px;
+  margin-left: 77px;
+}
+
+.services__content{
+  margin-top: 64px;
+  margin-bottom: 144px;
+}
+
+.services__title{
+  text-align: center;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.045em;
+  margin-bottom: 30px;
+}
+
+.services_text{
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+  max-width: 470px;
+}
+
+.cervices__list{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.cervices__link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services_text1,
+.services_text2,
+.services_text3{
+  color: #000;
+  margin-top: 43px;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0.045em;
+}
+
+.services__link-more{
+  display: flex;
+  padding: 25px 71px;
+  border: 2px solid #000;
+  border-radius: 9px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Gilroy-Medium';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.045em;
+  color: #000;
+  text-transform: uppercase;
+  width: 342px;
+  height: 73px;
+}
+
+.services__arrow{
+  margin-left: 23px;
+}
+
+
+.philosophy__blok1{
+  display: flex;
+  justify-content: center;
+  background-color: #DFE8E6;
+}
+
+.philosophy__texts1{
+  max-width: 603px;
+  margin-left: 43px;
+  margin-top: 113px;
+  margin-right: 56px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.philosophy__title{
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.045em;
+  margin-bottom: 55px;
+}
+
+.philosophy__text1,
+.philosophy__text2 {
+  font-size: 18px;
+  line-height: 139%;
+  
+  letter-spacing: 0.045em;
+}
+
+
+
+.philosophy__blok2{
+  display: flex;
+  justify-content: center;
+}
+
+.philosophy__text2{
+  max-width: 600px;
+  margin-top: 100px;
+ 
+  
+}
+
+.philosophy__texts2{
+  padding-left: 67px;
+}
+
+
+.philosophy__link{
+  margin-top: 81px;
+}
+
+.philosophy__img2{
+  margin-left: 66px;
+}
+
+.philosophy__img1,
+.philosophy__img2 {
+  max-width: 50%;
+}
+
+.therapy{
+  background-color: #DFDFDF;
+  height: 386px;
+}
+
+.therapy__content{
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.therapy__text{
+  display: block;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 78px;
+  letter-spacing: 0.205em;
+  text-align: center;
+ 
+}
+
+.footer{
+  background-color: #DFE8E6;
+  
+}
+
+.footer__logo{
+  margin-top: 45px;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  height: 200px;
+  margin: auto auto;
+}
+
+.footer__btn{
+  background-color: #DFE8E6;
+}
+
+ 
+
+
+@media (max-width: 1330px) {
+
+  .box__blog-menu {
+    display: flex;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__menu{
+    display: none;
+  }
+
+  .blog__menu-list + .blog__menu-list {
+    margin-top: 12px;
+    margin-left: 0;
+
+  }
+
+  .contact__btn{
+    margin-left: 0;
+  }
+
+  .menu__list-item+.menu__list-item {
+    margin-left: 40px;
+  }
+
+  .box__menu {
+    width: 240px;
+  }
+
+
+
+
+  
+}
+
+@media (max-width: 1250px) {
+  .contact__form {
+    max-width: 500px;
+  }
+
+  .input-name {
+    width: 500px;
+    height: 73px;
+    background-color: #C2DAD4;
+    border-radius: 9px;
+    border: none;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.045em;
+    color: #898989;
+    padding-left: 30px;
+  }
+
+  .input-name::placeholder {
+    font-size: 19px;
+    line-height: 26px;
+    letter-spacing: 0.045em;
+    color: #898989;
+    padding-left: 17px;
+
+  }
+
+  .contact__img {
+    margin-left: 52px;
+  }
+
+  .philosophy__texts1 {
+    margin-top: 93px;
+    margin-bottom: 35px;
+  }
+
+  .philosophy__title {
+    font-size: 45px;
+    margin-bottom: 45px;
+  }
+
+  .philosophy__text1,
+  .philosophy__text2 {
+    font-size: 17px;
+  }
+
+  .services__link-more {
+    font-size: 18px;
+    padding: 22px 58px;
+    width: 311px;
+    height: 67px;
+  }
+
+  .philosophy__link {
+    margin-top: 53px;
+    margin-bottom: 40px;
+  }
+
+}
+
+
+@media (max-width: 1130px){
+
+  
+
+  .burger{
+    display: flex;
+  }
+
+  .fixed_page {
+    overflow: hidden;
+  }
+
+
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 150px 40px;
+    background-color: #DFE8E6;
+  }
+
+  .menu__list-link {
+    display: block;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    row-gap: 22px;
+    text-align: center;
+  }
+
+  .menu__list-item+.menu__list-item {
+    margin-left: 0;
+  }
+
+  .box__blog-menu {
+    display: flex;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: row;
+  }
+
+  .blog__menu-list+.blog__menu-list {
+    margin-top: 0px;
+    margin-left: 30px;
+
+  }
+
+  .box__menu {
+    width: 380px;
+  }
+    
+  .empower__title {
+    margin: 0 30px;
+  }
+
+  .contact__img {
+    display: none;
+  }
+
+  
+
+  .philosophy__link{
+    margin-bottom: 51px;
+    margin-top: 51px;
+  }
+
+  .philosophy__texts1 {
+    margin-top: 60px;
+  }
+
+   
+
+  .philosophy__text1,
+  .philosophy__text2 {
+    font-size: 15px;
+  }
+
+  .philosophy__title {
+    font-size: 35px;
+    margin-bottom: 25px;
+  }
+
+  .philosophy__texts2 {
+    padding-left: 45px;
+  }
+
+  .philosophy__texts {
+    margin-top: 80px;
+  }
+
+  .philosophy__img2 {
+    margin-left: 45px;
+  }
+
+  .therapy__text {
+    font-size: 57px;
+  }
+
+  .therapy {
+  height: 287px;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1400px;
+    height: 260px;
+    margin: auto auto;
+  }
+
+  .menu__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 74px;
+  }
+
+.menu__list-footer {
+  display: flex;
+}
+
+.footer__btn {
+  margin-left: 23px;
+
+}
+
+}
+
+
+@media (max-width: 1024px) {
+  .about__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 35px;
+  }
+
+  .about__content-title {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  .about__text {
+    font-size: 14px;
+    margin-bottom: 23px;
+  }
+
+  .about__content-list {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .about__find-link {
+    padding: 23px 65px;
+    font-size: 20px;
+    width: 318px;
+  }
+
+  .services__img{
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 920px) {
+  .about__content-img{
+    display: none;
+}
+
+  .about> .container {
+    padding: 0 0;
+  }
+
+  .about__content{
+    background-image: url('../images/Rectangle29.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 56px 0 0 0;
+
+}
+  .about__content-text{
+    background: rgb(252 252 252 / 0.7);
+    padding: 49px 22px;
+    border-radius: 15px;
+    margin: 40px auto;
+  }
+
+  .services_text1,
+  .services_text2,
+  .services_text3 {
+    margin-top: 35px;
+    font-size: 19px;
+    line-height: 27px;
+  }
+
+  .philosophy__text2 {
+    margin-top: 60px;
+  }
+
+  .philosophy__link {
+    margin-top: 45px;
+  }
+
+  .services__link-more {
+    font-size: 17px;
+    padding: 16px 34px;
+    width: 264px;
+    height: 54px;
+  }
+
+  .services__content {
+    margin-bottom: 110px;
+  }
+
+  .philosophy> .container2{
+    padding: 0 0;
+  }
+
+  .philosophy__img1,
+  .philosophy__img2 {
+    display: none;
+  }
+
+  .philosophy__blok1 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../images/pexels-michael-burrows-71293831.jpg');
+    
+  }
+
+  .philosophy__texts1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .philosophy__texts1,
+  .philosophy__texts2 {
+    padding: 49px 22px;
+    border-radius: 15px;
+    margin: 40px auto;
+  }
+
+  .philosophy__texts1{
+    background: rgb(223 232 230 / 0.7);
+
+  }
+
+  .philosophy__texts2{
+    background: rgb(252 252 252 / 0.7);
+
+  }
+
+  .philosophy__blok2 {
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../images/pexels-michael-burrows-71293832.jpg');
+  }
+
+  .philosophy__texts2 {
+    max-width: 603px;
+  }
+
+  .therapy__text {
+    font-size: 48px;
+  }
+  .therapy {
+    height: 238px;
+  }
+
+  .footer__nav{
+    display: flex;
+    max-width: 1400px;
+    height: 390px;
+    margin: auto auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu__list-footer{
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .blog__menu-footer{
+    margin-bottom: 30px;
+  }
+
+  .menu__list-item-about:hover .sub-menu__list {
+    display: none;
+  }
+
+  .menu__list-item-services:hover .sub-menu__list {
+    display: none;
+  }
+
+  .menu__list-item-book__appointment:hover .sub-menu__list {
+    display: none;
+  }
+
+  .menu__list-item-testimonials:hover .sub-menu__list {
+    display: none;
+  }
+
+ 
+  
+}
+
+@media (max-width: 620px) {
+  .blog__menu {
+    display: block;
+    
+  }
+
+  .box__blog-menu{
+    display: none;
+  }
+
+  .box__menu {
+    width: 190px;
+  }
+
+  .contact__form {
+    max-width: 420px;
+  }
+
+  .input-name {
+    width: 420px;
+    height: 73px;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  .input-name::placeholder {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.045em;
+    color: #898989;
+    padding-left: 15px;
+
+  }
+
+  .contact__title {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  .contact__text {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+
+
+  .services_text1,
+  .services_text2,
+  .services_text3 {
+    margin-top: 25px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .philosophy__texts1,
+  .philosophy__texts2,
+  .about__content-text {
+    margin: 40px 10px;
+  }
+
+  .therapy__text {
+    font-size: 40px;
+  }
+
+  .therapy {
+    height: 190px;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: normal;
+    height: 650px;
+  }
+  
+
+  .menu__list-footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 66px;
+  }
+
+  .menu__list-item+.menu__list-item {
+    margin-left: 0;
+
+  }
+
+  .menu__list-item{
+    margin-bottom: 40px;
+  }
+
+  .blog__menu-footer {
+    display: block;
+  }
+    
+  
+}
+
+@media (max-width: 545px){
+  .services_text1,
+  .services_text2,
+  .services_text3 {
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .services__arrow {
+    margin-left: 19px;
+  }
+
+  .services__link-more {
+    padding: 24px 47px;
+    font-size: 15px;
+    width: 256px;
+    height: 67px;
+  }
+
+  .cervices__list {
+    margin-bottom: 75px;
+  }
+
+  .services__content {
+    margin-top: 60px;
+    margin-bottom: 90px;
+  }
+
+  .philosophy__text1,
+  .philosophy__text2 {
+    font-size: 13px;
+  }
+
+  .philosophy__title {
+    font-size: 23px;
+    margin-bottom: 0px;
+  }
+
+  .philosophy__texts1,
+  .philosophy__texts2 {
+    padding: 25px 22px;
+  }
+
+  .philosophy__text2 {
+    margin-top: 10px;
+  }
+
+  .therapy__text {
+    font-size: 30px;
+  }
+
+  .therapy {
+    height: 150px;
+  }
+
+}
+
+@media (max-width: 435px){
+  .contact__btn {
+    padding: 6px 13px 3px;
+    font-size: 11px;
+    margin-left: 13px;
+  }
+
+  .header__nav {
+   
+    height: 95px;
+   
+  }
+
+  .empower-container2 {
+    height: calc(100vh - 95px);
+  }
+
+  .empower__title {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0 30px;
+  }
+
+  .empower__session-link {
+    padding: 12px 28px;
+    margin-top: 32px;
+  }
+
+
+  .logo {
+    margin-top: 10px;
+    width: 141px;
+  }
+
+  .box__menu {
+    width: 156px;
+  }
+
+  .about__find-link {
+    padding: 20px 51px;
+    font-size: 17px;
+    width: 270px;
+  }
+
+  .about__title {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+
+  .about__content-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+
+  .contact__form {
+    max-width: 310px;
+  }
+
+  .input-name {
+    width: 310px;
+    height: 53px;
+    font-size: 13px;
+    padding-left: 5px;
+  }
+
+  .input-name::placeholder {
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.045em;
+    color: #898989;
+    padding-left: 5px;
+
+  }
+
+  .input-btn {
+    font-size: 17px;
+  }
+
+  .services__link-more {
+    padding: 14px 16px;
+    font-size: 14px;
+    width: 210px;
+    height: 50px;
+  }
+  
+  .services__arrow {
+    margin-top: 1px;
+    margin-left: 15px;
+  }
+
+  .therapy__text {
+    font-size: 26px;
+  }
+
+  
+
+
+
+}
+@media (max-width: 370px){
+  .therapy__text {
+    font-size: 23px;
+  }
+
+
+  .therapy {
+    height: 130px;
+  }
+
+  
+
+}
+@media (max-width: 620px){}
